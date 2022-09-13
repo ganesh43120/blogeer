@@ -1,0 +1,115 @@
+@import url('../css/fonts.css');
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+
+
+    --hed: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    --head:'Cedarville_Cursive',cursive;
+}
+
+/*-----GLOBAL CLASSES------*/
+
+a{
+    text-decoration: none;
+    
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+/*global classes*/
+
+/*-------NAVBAR--------*/
+.nav{
+    background:rgb(41, 199, 73);
+    padding:0 2rem;
+    height: 0rem;
+    min-height: 20vh;
+    overflow:hidden;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.nav .toggle-collapse{
+    position: absolute;
+    top:0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: #96fbc4;
+
+}
+.collapse{
+    height: 30rem;
+    background-color: orangered;
+}
+.nav .nav-items{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.nav .nav-items .nav-links{
+    padding: 1.6rem 1rem;
+    position: relative;
+}
+.nav .nav-items .nav-links:hover{
+    background-color: aliceblue;
+}
+.nav .nav-brand{
+    font-size:2rem;
+    padding: 1rem 0;
+    font-family: var(--head);
+    color: var(--hd);
+    
+}
+.nav .nav-brand:hover{
+    font-size: 2rem;
+    
+}
+.nav .nav-brand:hover a{
+    color: orangered;
+}
+
+.nav .social{
+    padding:1.4rem 0;
+    color: var(--hed);
+}
+.nav .social i{
+    padding: 0.2rem;
+}
+.nav .social i:hover{
+    color: whitesmoke;
+}
+/*navbar*/
+/*  veiw port below 750px   */
+@media only screen and (max-width:700px){
+    
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
